@@ -1,4 +1,4 @@
-algorithm-stash
+Code Stash
 ===============
 
 A home for algorithms.
