@@ -2,6 +2,7 @@ function palindrome(str) {
   if (typeof str === 'undefined') {
     return false;
   }
+  str = str.toLowerCase();
 
   if (str.length < 2) {
     return true;
@@ -17,14 +18,15 @@ function palindrome(str) {
 function assert(value, message) {
   var error = '';
   if (value) {
-    message = "✔︎  " + message;
+    message = "✔︎ " + message;
   }
   else {
-    message = "❌✔︎ " + message;
+    message = "✗ " + message;
   }
   console.log(message);
 }
 
 assert(palindrome() === false, "Should be false when no argument was supplied"); 
 assert(palindrome('abba') === true, "Should be true for 'abba'"); 
+assert(palindrome('rAcecar') === true, "Should be true for 'rAcecar'"); 
 assert(palindrome('test') === false, "Should be true for 'test'"); 
